@@ -99,9 +99,9 @@ app.frame("/", async (c) => {
       >
         {alreadyMinted ? (
           <span style={{ color: "white", fontSize: "50px" }}>NFT Already Minted</span>
-        ) : isMint ? (
+        ) : alreadyMinted && isMint ? (
           <span style={{ color: "white", fontSize: "50px" }}> NFT Minted to ${account?.username} 🏆</span>
-        ) : isView ? (
+        ) : alreadyMinted && isView ? (
           <img src={imageUrl} />
         ) : (
           <span style={{ color: "white", fontSize: "50px" }}> Click Mint to mint a free NFT 🖼</span>
